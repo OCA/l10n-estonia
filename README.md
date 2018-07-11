@@ -7,6 +7,13 @@
 Odoo Estonian Localization
 
 [//]: # (addons)
+
+Available addons
+----------------
+addon | version | summary
+--- | --- | ---
+[currency_rate_update_ee_beep](currency_rate_update_ee_beep/) | 11.0.1.0.0 | Download currency exchange rates from Bank of Estonia
+
 [//]: # (end addons)
 
 ----

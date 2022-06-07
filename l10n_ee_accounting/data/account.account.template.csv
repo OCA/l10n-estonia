@@ -34,3 +34,6 @@
 "bills_and_invoices_exchange_loss","Foreign Exchange Loss (bills & invoices)","705010","account.data_account_type_expenses","l10n_ee_accounting.chart_template","l10n_ee_accounting.is_other_financial_expenses","False","Net loss arising on exchange rate changes on trade receivables and liabilities to the suppliers"
 "bank_accounts_and_loans_exchange_loss","Foreign Exchange Loss (bank accounts & loans)","705020","account.data_account_type_expenses","l10n_ee_accounting.chart_template","l10n_ee_accounting.is_other_financial_expenses","False","Net loss arising on currency rate difference of the loans, bank accounts"
 "undistributed_profit_loss","Undistributed Profit/Loss","599900","account.data_unaffected_earnings","l10n_ee_accounting.chart_template","","False",""
+"cash_differrence_gain","Cash Difference Gain","602100","account.data_account_type_revenue","l10n_ee_accounting.chart_template","l10n_ee_accounting.is_other_financial_income","False",""
+"cash_differrence_loss","Cash Difference Loss","705100","account.data_account_type_expenses","l10n_ee_accounting.chart_template","l10n_ee_accounting.is_other_financial_expenses","False",""
+"trade_receivable_pos","Trade Receivable (PoS)","102110","account.data_account_type_receivable","l10n_ee_accounting.chart_template","l10n_ee_accounting.bs_receivables_and_prepayments","True",""

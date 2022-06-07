@@ -3,7 +3,7 @@
 {
     "name": "Estonia - Accounting",
     "summary": "Estonian accounting localization",
-    "version": "12.0.1.0.0",
+    "version": "13.0.1.0.0",
     "category": "Localization",
     "website": "https://github.com/OCA/l10n-estonia",
     "author": "CorporateHub, Odoo Community Association (OCA)",
@@ -11,7 +11,7 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["account", "base_iban", "base_vat",],
+    "depends": ["account", "base_iban", "base_vat"],
     "data": [
         "data/income_statement.xml",
         "data/balance_sheet.xml",

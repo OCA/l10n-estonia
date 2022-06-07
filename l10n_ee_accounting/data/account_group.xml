@@ -14,6 +14,7 @@
               - 102xxx Receivables and Prepayments
                   - 1021xx Trade Receivables
                     - 102100 Trade Receivables
+                    - 102110 Trade Receivables (PoS)
                   - 1022xx Receivables from connected parties
                     - 102200 Receivables from connected parties
                   - 1023xx Prepaid and deferred taxes
@@ -72,6 +73,8 @@
                 - 6020xx Foreign Exchange Gains
                   - 602010 Foreign Exchange Gain (bills & invoices)
                   - 602020 Foreign Exchange Gain (bank accounts & loans)
+                - 6021xx Cash Difference Gain
+                  - 602100 Cash Difference Gain
           - 7xxxxx Expenses
               - 701xxx Cost of Trade Income
                 - 701000 Cost of Trade Income
@@ -90,6 +93,8 @@
                 - 7050xx Foreign Exchange Losses
                   - 705010 Foreign Exchange Loss (bills & invoices)
                   - 705020 Foreign Exchange Loss (bank accounts & loans)
+                - 7051xx Cash Difference Loss
+                  - 705100 Cash Difference Loss
     -->
     <record id="current_assets_section" model="account.group">
         <field name="name">Current Assets</field>
@@ -282,6 +287,11 @@
         <field name="name">Foreign Exchange Gains</field>
         <field name="code_prefix">6020</field>
     </record>
+    <record id="cash_difference_gain_account_group" model="account.group">
+        <field name="parent_id" ref="financial_income_account_group" />
+        <field name="name">Cash Difference Gain</field>
+        <field name="code_prefix">6021</field>
+    </record>
     <record id="expenses_section" model="account.group">
         <field name="name">Expenses</field>
         <field name="code_prefix">7</field>
@@ -330,5 +340,10 @@
         <field name="parent_id" ref="financial_expenses_account_group" />
         <field name="name">Foreign Exchange Losses</field>
         <field name="code_prefix">7050</field>
+    </record>
+    <record id="cash_difference_loss_account_group" model="account.group">
+        <field name="parent_id" ref="financial_expenses_account_group" />
+        <field name="name">Cash Difference Loss</field>
+        <field name="code_prefix">7051</field>
     </record>
 </odoo>

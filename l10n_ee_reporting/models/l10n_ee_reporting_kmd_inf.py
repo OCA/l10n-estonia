@@ -13,11 +13,10 @@ class L10nEeReportingKmdInf(models.Model):
     _order = "part asc, move_date desc, partner_name asc"
 
     company_id = fields.Many2one("res.company", readonly=True)
-    part = fields.Selection([("A", "Part A"), ("B", "Part B")], readonly=True,)
+    part = fields.Selection([("A", "Part A"), ("B", "Part B")], readonly=True)
     currency_id = fields.Many2one("res.currency", readonly=True)
     move_id = fields.Many2one("account.move", readonly=True)
     move_date = fields.Date(readonly=True)
-    invoice_id = fields.Many2one("account.invoice", readonly=True)
     invoice_date = fields.Date(readonly=True)
     invoice_amount_untaxed = fields.Monetary(readonly=True)
     invoice_amount_total = fields.Monetary(readonly=True)
@@ -49,7 +48,6 @@ class L10nEeReportingKmdInf(models.Model):
                     NULL::INTEGER AS currency_id,
                     NULL::INTEGER AS move_id,
                     NULL::DATE AS move_date,
-                    NULL::INTEGER AS invoice_id,
                     NULL::DATE AS invoice_date,
                     NULL::NUMERIC AS invoice_amount_untaxed,
                     NULL::NUMERIC AS invoice_amount_total,
@@ -75,7 +73,6 @@ class L10nEeReportingKmdInf(models.Model):
                 entry.currency_id AS currency_id,
                 entry.move_id AS move_id,
                 entry.move_date AS move_date,
-                entry.invoice_id AS invoice_id,
                 entry.invoice_date AS invoice_date,
                 entry.invoice_amount_untaxed AS invoice_amount_untaxed,
                 entry.invoice_amount_total AS invoice_amount_total,
@@ -98,19 +95,18 @@ class L10nEeReportingKmdInf(models.Model):
                     move_line.company_id AS company_id,
                     (
                         CASE
-                            WHEN invoice.type = 'out_invoice' THEN 'A'
-                            WHEN invoice.type = 'out_refund' THEN 'A'
-                            WHEN invoice.type = 'in_invoice' THEN 'B'
-                            WHEN invoice.type = 'in_refund' THEN 'B'
+                            WHEN move.type = 'out_invoice' THEN 'A'
+                            WHEN move.type = 'out_refund' THEN 'A'
+                            WHEN move.type = 'in_invoice' THEN 'B'
+                            WHEN move.type = 'in_refund' THEN 'B'
                         END
                     ) AS part,
                     move_line.company_currency_id AS currency_id,
                     move.id AS move_id,
                     move.date AS move_date,
-                    invoice.id AS invoice_id,
-                    COALESCE(invoice.date, invoice.date_invoice) AS invoice_date,
-                    invoice.amount_untaxed_signed AS invoice_amount_untaxed,
-                    invoice.amount_total_company_signed AS invoice_amount_total,
+                    move.invoice_date AS invoice_date,
+                    move.amount_untaxed_signed AS invoice_amount_untaxed,
+                    move.amount_total_signed AS invoice_amount_total,
                     tax.tax_group_id AS tax_group_id,
                     (
                         CASE
@@ -123,8 +119,6 @@ class L10nEeReportingKmdInf(models.Model):
                     partner.name AS partner_name,
                     partner.vat AS partner_vat
                 FROM %s AS move_line
-                INNER JOIN %s AS invoice ON
-                    invoice.id = move_line.invoice_id
                 INNER JOIN %s AS move ON
                     move.id = move_line.move_id
                 INNER JOIN %s AS aml_tax_rel ON
@@ -135,6 +129,13 @@ class L10nEeReportingKmdInf(models.Model):
                     partner.id = move_line.partner_id
                 WHERE
                         move.state = 'posted'
+                    AND
+                        move.type IN (
+                            'out_invoice',
+                            'out_refund',
+                            'in_invoice',
+                            'in_refund'
+                        )
                     AND
                         tax.tax_group_id IN (%s, %s)
                     AND
@@ -149,19 +150,16 @@ class L10nEeReportingKmdInf(models.Model):
                     move_line.company_currency_id,
                     move.id,
                     move.date,
-                    invoice.id,
-                    invoice.date,
-                    invoice.date_invoice,
-                    invoice.amount_untaxed_signed,
-                    invoice.amount_total_company_signed,
+                    move.invoice_date,
+                    move.amount_untaxed_signed,
+                    move.amount_total_signed,
                     tax.tax_group_id,
                     partner.id,
                     partner.name,
                     partner.vat
                 ORDER BY
                     part,
-                    invoice_date,
-                    invoice_id
+                    invoice_date
             ) AS entry
             INNER JOIN account_move_line AS tax_move_line ON
                     tax_move_line.move_id = entry.move_id
@@ -176,7 +174,6 @@ class L10nEeReportingKmdInf(models.Model):
                 entry.currency_id,
                 entry.move_id,
                 entry.move_date,
-                entry.invoice_id,
                 entry.invoice_date,
                 entry.invoice_amount_untaxed,
                 entry.invoice_amount_total,
@@ -191,7 +188,6 @@ class L10nEeReportingKmdInf(models.Model):
                 l10n_ee_accounting_vat_20.id,
                 l10n_ee_accounting_vat_9.id,
                 AsIs(self.env["account.move.line"]._table),
-                AsIs(self.env["account.invoice"]._table),
                 AsIs(self.env["account.move"]._table),
                 AsIs(self.env["account.move.line"]._fields["tax_ids"].relation),
                 AsIs(self.env["account.tax"]._table),

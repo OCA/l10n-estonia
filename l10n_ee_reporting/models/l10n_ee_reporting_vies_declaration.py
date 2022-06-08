@@ -1,8 +1,9 @@
 # Copyright 2020-2022 CorporateHub (https://corporatehub.eu)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import api, fields, models, tools
 from psycopg2.extensions import AsIs
+
+from odoo import api, fields, models, tools
 
 
 class L10nEeReportingViesDeclaration(models.Model):
@@ -18,8 +19,7 @@ class L10nEeReportingViesDeclaration(models.Model):
     currency_id = fields.Many2one("res.currency", readonly=True)
     product_id = fields.Many2one("product.product", readonly=True)
     product_type = fields.Selection(
-        [("goods", "Goods"), ("services", "Services")],
-        readonly=True,
+        [("goods", "Goods"), ("services", "Services")], readonly=True,
     )
     partner_id = fields.Many2one("res.partner", readonly=True)
     partner_vat = fields.Char(string="Tax ID", readonly=True)
@@ -28,11 +28,11 @@ class L10nEeReportingViesDeclaration(models.Model):
     def init(self):
         tools.drop_view_if_exists(self.env.cr, self._table)
         l10n_ee_accounting_kmd2017_3_1_tag = self.env.ref(
-            "l10n_ee_accounting.kmd2017_3_1",
-            raise_if_not_found=False,
+            "l10n_ee_accounting.kmd2017_3_1", raise_if_not_found=False,
         )
         if not l10n_ee_accounting_kmd2017_3_1_tag:
-            self.env.cr.execute("""CREATE OR REPLACE VIEW %s AS (
+            self.env.cr.execute(
+                """CREATE OR REPLACE VIEW %s AS (
                 SELECT
                     NULL::INTEGER AS id,
                     NULL::INTEGER AS company_id,
@@ -45,10 +45,13 @@ class L10nEeReportingViesDeclaration(models.Model):
                     NULL::INTEGER as partner_id,
                     NULL::VARCHAR as partner_vat
                 LIMIT 0
-            )""", (AsIs(self._table),))
+            )""",
+                (AsIs(self._table),),
+            )
             return
 
-        self.env.cr.execute("""CREATE OR REPLACE VIEW %s AS (
+        self.env.cr.execute(
+            """CREATE OR REPLACE VIEW %s AS (
             SELECT
                 move_line.id AS id,
                 move_line.company_id AS company_id,
@@ -88,13 +91,15 @@ class L10nEeReportingViesDeclaration(models.Model):
                         WHERE
                             tag.account_account_tag_id = %s
                     )
-        )""", (
-            AsIs(self._table),
-            AsIs(self.env["account.move.line"]._table),
-            AsIs(self.env["account.move.line"]._fields["tax_ids"].relation),
-            AsIs(self.env["account.tax"]._table),
-            AsIs(self.env["product.product"]._table),
-            AsIs(self.env["product.template"]._table),
-            AsIs(self.env["res.partner"]._table),
-            l10n_ee_accounting_kmd2017_3_1_tag.id,
-        ))
+        )""",
+            (
+                AsIs(self._table),
+                AsIs(self.env["account.move.line"]._table),
+                AsIs(self.env["account.move.line"]._fields["tax_ids"].relation),
+                AsIs(self.env["account.tax"]._table),
+                AsIs(self.env["product.product"]._table),
+                AsIs(self.env["product.template"]._table),
+                AsIs(self.env["res.partner"]._table),
+                l10n_ee_accounting_kmd2017_3_1_tag.id,
+            ),
+        )

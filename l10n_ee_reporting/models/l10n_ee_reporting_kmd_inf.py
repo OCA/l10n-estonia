@@ -1,8 +1,9 @@
 # Copyright 2020-2022 CorporateHub (https://corporatehub.eu)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import api, fields, models, tools
 from psycopg2.extensions import AsIs
+
+from odoo import api, fields, models, tools
 
 
 class L10nEeReportingKmdInf(models.Model):
@@ -12,10 +13,7 @@ class L10nEeReportingKmdInf(models.Model):
     _order = "part asc, move_date desc, partner_name asc"
 
     company_id = fields.Many2one("res.company", readonly=True)
-    part = fields.Selection(
-        [("A", "Part A"), ("B", "Part B")],
-        readonly=True,
-    )
+    part = fields.Selection([("A", "Part A"), ("B", "Part B")], readonly=True,)
     currency_id = fields.Many2one("res.currency", readonly=True)
     move_id = fields.Many2one("account.move", readonly=True)
     move_date = fields.Date(readonly=True)
@@ -35,16 +33,15 @@ class L10nEeReportingKmdInf(models.Model):
     def init(self):
         tools.drop_view_if_exists(self.env.cr, self._table)
         l10n_ee_accounting_vat_20 = self.env.ref(
-            "l10n_ee_accounting.vat_20",
-            raise_if_not_found=False,
+            "l10n_ee_accounting.vat_20", raise_if_not_found=False,
         )
         l10n_ee_accounting_vat_9 = self.env.ref(
-            "l10n_ee_accounting.vat_9",
-            raise_if_not_found=False,
+            "l10n_ee_accounting.vat_9", raise_if_not_found=False,
         )
         base_ee = self.env.ref("base.ee")
         if not l10n_ee_accounting_vat_20 or not l10n_ee_accounting_vat_9:
-            self.env.cr.execute("""CREATE OR REPLACE VIEW %s AS (
+            self.env.cr.execute(
+                """CREATE OR REPLACE VIEW %s AS (
                 SELECT
                     NULL::INTEGER AS id,
                     NULL::INTEGER AS company_id,
@@ -64,10 +61,13 @@ class L10nEeReportingKmdInf(models.Model):
                     NULL::VARCHAR AS partner_name,
                     NULL::VARCHAR AS partner_vat
                 LIMIT 0
-            )""", (AsIs(self._table),))
+            )""",
+                (AsIs(self._table),),
+            )
             return
 
-        self.env.cr.execute("""CREATE OR REPLACE VIEW %s AS (
+        self.env.cr.execute(
+            """CREATE OR REPLACE VIEW %s AS (
             SELECT
                 entry.id AS id,
                 entry.company_id AS company_id,
@@ -185,17 +185,19 @@ class L10nEeReportingKmdInf(models.Model):
                 entry.partner_id,
                 entry.partner_name,
                 entry.partner_vat
-        )""", (
-            AsIs(self._table),
-            l10n_ee_accounting_vat_20.id,
-            l10n_ee_accounting_vat_9.id,
-            AsIs(self.env["account.move.line"]._table),
-            AsIs(self.env["account.invoice"]._table),
-            AsIs(self.env["account.move"]._table),
-            AsIs(self.env["account.move.line"]._fields["tax_ids"].relation),
-            AsIs(self.env["account.tax"]._table),
-            AsIs(self.env["res.partner"]._table),
-            l10n_ee_accounting_vat_20.id,
-            l10n_ee_accounting_vat_9.id,
-            base_ee.id,
-        ))
+        )""",
+            (
+                AsIs(self._table),
+                l10n_ee_accounting_vat_20.id,
+                l10n_ee_accounting_vat_9.id,
+                AsIs(self.env["account.move.line"]._table),
+                AsIs(self.env["account.invoice"]._table),
+                AsIs(self.env["account.move"]._table),
+                AsIs(self.env["account.move.line"]._fields["tax_ids"].relation),
+                AsIs(self.env["account.tax"]._table),
+                AsIs(self.env["res.partner"]._table),
+                l10n_ee_accounting_vat_20.id,
+                l10n_ee_accounting_vat_9.id,
+                base_ee.id,
+            ),
+        )

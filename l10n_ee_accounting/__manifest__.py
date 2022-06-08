@@ -11,11 +11,7 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "account",
-        "base_iban",
-        "base_vat",
-    ],
+    "depends": ["account", "base_iban", "base_vat",],
     "data": [
         "data/income_statement.xml",
         "data/balance_sheet.xml",

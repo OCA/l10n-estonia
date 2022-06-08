@@ -11,10 +11,7 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "l10n_ee_accounting",
-        "mis_builder",
-    ],
+    "depends": ["l10n_ee_accounting", "mis_builder",],
     "data": [
         "data/income_statement.xml",
         "data/balance_sheet.xml",

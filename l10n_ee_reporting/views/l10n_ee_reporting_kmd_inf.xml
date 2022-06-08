@@ -10,18 +10,24 @@
         <field name="model">l10n.ee.reporting.kmd.inf</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="company_id" groups="base.group_multi_company"/>
-                <field name="part"/>
-                <field name="partner_vat"/>
-                <field name="partner_name"/>
-                <field name="invoice_id"/>
-                <field name="invoice_date"/>
-                <field name="invoice_amount_untaxed" string="Amount ex. Tax"/>
-                <field name="invoice_amount_total" string="Total amount"/>
-                <field name="tax_rate" string="Tax rate"/>
-                <field name="transactions_tax_base_amount" string="Transactions taxable amount"/>
-                <field name="transactions_tax_amount" string="Transactions tax amount"/>
-                <field name="currency_id" invisible="1"/>
+                <field name="company_id" groups="base.group_multi_company" />
+                <field name="part" />
+                <field name="partner_vat" />
+                <field name="partner_name" />
+                <field name="invoice_id" />
+                <field name="invoice_date" />
+                <field name="invoice_amount_untaxed" string="Amount ex. Tax" />
+                <field name="invoice_amount_total" string="Total amount" />
+                <field name="tax_rate" string="Tax rate" />
+                <field
+                    name="transactions_tax_base_amount"
+                    string="Transactions taxable amount"
+                />
+                <field
+                    name="transactions_tax_amount"
+                    string="Transactions tax amount"
+                />
+                <field name="currency_id" invisible="1" />
             </tree>
         </field>
     </record>
@@ -32,30 +38,36 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
-                    <field name="currency_id" invisible="1"/>
+                    <field name="currency_id" invisible="1" />
                     <group>
-                        <field name="company_id" groups="base.group_multi_company"/>
+                        <field name="company_id" groups="base.group_multi_company" />
                     </group>
                     <group>
-                        <field name="part"/>
-                        <field name="invoice_id"/>
-                        <field name="invoice_date"/>
-                        <field name="invoice_amount_untaxed" string="Amount ex. Tax"/>
-                        <field name="invoice_amount_total" string="Total amount"/>
+                        <field name="part" />
+                        <field name="invoice_id" />
+                        <field name="invoice_date" />
+                        <field name="invoice_amount_untaxed" string="Amount ex. Tax" />
+                        <field name="invoice_amount_total" string="Total amount" />
                     </group>
                     <group>
-                        <field name="tax_group_id"/>
-                        <field name="tax_rate" string="Tax rate"/>
-                        <field name="transactions_tax_base_amount" string="Transactions taxable amount"/>
-                        <field name="transactions_tax_amount" string="Transactions tax amount"/>
+                        <field name="tax_group_id" />
+                        <field name="tax_rate" string="Tax rate" />
+                        <field
+                            name="transactions_tax_base_amount"
+                            string="Transactions taxable amount"
+                        />
+                        <field
+                            name="transactions_tax_amount"
+                            string="Transactions tax amount"
+                        />
                     </group>
                     <group>
-                        <field name="partner_id"/>
-                        <field name="partner_vat"/>
+                        <field name="partner_id" />
+                        <field name="partner_vat" />
                     </group>
                     <group>
-                        <field name="move_id"/>
-                        <field name="move_date"/>
+                        <field name="move_id" />
+                        <field name="move_date" />
                     </group>
                 </sheet>
             </form>
@@ -67,11 +79,23 @@
         <field name="model">l10n.ee.reporting.kmd.inf</field>
         <field name="arch" type="xml">
             <search>
-                <field name="move_date"/>
+                <field name="move_date" />
                 <separator />
-                <filter string="Part A" name="filter_part_a" domain="[('part','=','A')]" />
-                <filter string="Part B" name="filter_part_b" domain="[('part','=','B')]" />
-                <filter string="Transaction Date" name="filter_move_date" date="move_date"/>
+                <filter
+                    string="Part A"
+                    name="filter_part_a"
+                    domain="[('part','=','A')]"
+                />
+                <filter
+                    string="Part B"
+                    name="filter_part_b"
+                    domain="[('part','=','B')]"
+                />
+                <filter
+                    string="Transaction Date"
+                    name="filter_move_date"
+                    date="move_date"
+                />
                 <group name="groupby">
                     <filter
                         name="groupby_invoice_date"
@@ -97,13 +121,11 @@
         <field name="name">KMD INF Appendix</field>
         <field name="res_model">l10n.ee.reporting.kmd.inf</field>
         <field name="view_mode">tree,form</field>
-        <field name="context">{'search_default_groupby_invoice_date': 1, 'search_default_groupby_part': 1}</field>
+        <field
+            name="context"
+        >{'search_default_groupby_invoice_date': 1, 'search_default_groupby_part': 1}</field>
     </record>
 
-    <menuitem
-        id="kmd_inf_menu"
-        action="kmd_inf_action"
-        parent="reporting_menu"
-    />
+    <menuitem id="kmd_inf_menu" action="kmd_inf_action" parent="reporting_menu" />
 
 </odoo>

@@ -12,6 +12,8 @@
                   - 1011xx Cash Accounts
                   - 1012xx Bank Accounts
                     - 101200 Bank Suspense
+                    - 101201 Outstanding Receipts
+                    - 101202 Outstanding Payments
               - 102xxx Receivables and Prepayments
                   - 1021xx Trade Receivables
                     - 102100 Trade Receivables

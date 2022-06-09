@@ -3,10 +3,10 @@
 {
     "name": "Estonia - Reporting",
     "summary": "Estonian reporting localization",
-    "version": "14.0.1.0.0",
+    "version": "15.0.1.0.0",
     "category": "Localization",
     "website": "https://github.com/OCA/l10n-estonia",
-    "author": "CorporateHub, Odoo Community Association (OCA)",
+    "author": "CorporateHub, Cetmix, Odoo Community Association (OCA)",
     "maintainers": ["alexey-pelykh"],
     "license": "AGPL-3",
     "application": False,

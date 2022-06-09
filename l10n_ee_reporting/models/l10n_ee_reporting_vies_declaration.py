@@ -97,7 +97,7 @@ class L10nEeReportingViesDeclaration(models.Model):
             (
                 AsIs(self._table),
                 AsIs(self.env["account.move.line"]._table),
-                AsIs(self.env["account.move.line"]._fields["tag_ids"].relation),
+                AsIs(self.env["account.move.line"]._fields["tax_tag_ids"].relation),
                 AsIs(self.env["account.account.tag"]._table),
                 AsIs(self.env["product.product"]._table),
                 AsIs(self.env["product.template"]._table),

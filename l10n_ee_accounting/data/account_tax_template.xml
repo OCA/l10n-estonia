@@ -16,6 +16,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">purchase</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -59,6 +60,7 @@
         <field name="amount">9</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">purchase</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_9" />
         <field
@@ -103,6 +105,7 @@
         <field name="amount">0</field>
         <field name="amount_type">fixed</field>
         <field name="type_tax_use">purchase</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_absent" />
         <field
@@ -145,6 +148,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">purchase</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_reverse_charge" />
         <field
@@ -203,6 +207,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">purchase</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -262,6 +267,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">purchase</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -323,6 +329,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">purchase</field>
+        <field name="tax_scope">consu</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -366,6 +373,7 @@
         <field name="amount">9</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">purchase</field>
+        <field name="tax_scope">consu</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_9" />
         <field
@@ -409,6 +417,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">purchase</field>
+        <field name="tax_scope">consu</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -452,6 +461,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">purchase</field>
+        <field name="tax_scope">consu</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -495,6 +505,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">purchase</field>
+        <field name="tax_scope">consu</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -539,6 +550,7 @@
         <field name="amount">0</field>
         <field name="amount_type">fixed</field>
         <field name="type_tax_use">purchase</field>
+        <field name="tax_scope">consu</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_absent" />
         <field
@@ -581,6 +593,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">purchase</field>
+        <field name="tax_scope">consu</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_reverse_charge" />
         <field
@@ -644,6 +657,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">purchase</field>
+        <field name="tax_scope">consu</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -699,6 +713,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -745,6 +760,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_reverse_charge" />
         <field
@@ -789,6 +805,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -843,6 +860,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -895,6 +913,7 @@
         <field name="amount">9</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_9" />
         <field
@@ -947,6 +966,7 @@
         <field name="amount">0</field>
         <field name="amount_type">fixed</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_exempt" />
         <field
@@ -1024,6 +1044,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -1072,6 +1093,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_reverse_charge" />
         <field
@@ -1118,6 +1140,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -1168,6 +1191,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_exempt" />
         <field
@@ -1221,6 +1245,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -1275,6 +1300,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -1326,6 +1352,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -1372,6 +1399,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_reverse_charge" />
         <field
@@ -1422,6 +1450,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -1474,6 +1503,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -1524,6 +1554,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -1578,6 +1609,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -1652,6 +1684,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -1708,6 +1741,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -1766,6 +1800,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -1832,6 +1867,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -1880,6 +1916,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_reverse_charge" />
         <field
@@ -1924,6 +1961,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -1976,6 +2014,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -2024,6 +2063,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_reverse_charge" />
         <field
@@ -2070,6 +2110,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -2133,6 +2174,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -2203,6 +2245,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -2251,6 +2294,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_reverse_charge" />
         <field
@@ -2297,6 +2341,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -2359,6 +2404,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -2407,6 +2453,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_reverse_charge" />
         <field
@@ -2453,6 +2500,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -2511,6 +2559,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -2564,6 +2613,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -2612,6 +2662,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_reverse_charge" />
         <field
@@ -2661,6 +2712,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -2719,6 +2771,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -2775,6 +2828,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -2828,6 +2882,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -2876,6 +2931,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_reverse_charge" />
         <field
@@ -2921,6 +2977,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -2974,6 +3031,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -3020,6 +3078,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_reverse_charge" />
         <field
@@ -3065,6 +3124,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -3118,6 +3178,7 @@
         <field name="amount">0</field>
         <field name="amount_type">fixed</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_exempt" />
         <field
@@ -3171,6 +3232,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -3219,6 +3281,7 @@
         <field name="amount">0</field>
         <field name="amount_type">fixed</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_exempt" />
         <field
@@ -3266,6 +3329,7 @@
         <field name="amount">0</field>
         <field name="amount_type">fixed</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_exempt" />
         <field
@@ -3318,6 +3382,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -3364,6 +3429,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_reverse_charge" />
         <field
@@ -3409,6 +3475,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -3463,6 +3530,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -3511,6 +3579,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_reverse_charge" />
         <field
@@ -3555,6 +3624,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -3610,6 +3680,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -3658,6 +3729,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_reverse_charge" />
         <field
@@ -3704,6 +3776,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -3757,6 +3830,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -3805,6 +3879,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_reverse_charge" />
         <field
@@ -3851,6 +3926,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">service</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -3930,6 +4006,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">consu</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -3981,6 +4058,7 @@
         <field name="amount">9</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">consu</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_9" />
         <field
@@ -4037,6 +4115,7 @@
         <field name="amount">20</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">consu</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_20" />
         <field
@@ -4083,6 +4162,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">consu</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_reverse_charge" />
         <field
@@ -4137,6 +4217,7 @@
         <field name="amount">9</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">consu</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_9" />
         <field
@@ -4183,6 +4264,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">consu</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_reverse_charge" />
         <field
@@ -4237,6 +4319,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">consu</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field
@@ -4283,6 +4366,7 @@
         <field name="amount">0</field>
         <field name="amount_type">percent</field>
         <field name="type_tax_use">sale</field>
+        <field name="tax_scope">consu</field>
         <field name="chart_template_id" ref="chart_template" />
         <field name="tax_group_id" ref="vat_0" />
         <field

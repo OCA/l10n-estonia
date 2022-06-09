@@ -3,7 +3,7 @@
 {
     "name": "Estonia - Accounting",
     "summary": "Estonian accounting localization",
-    "version": "13.0.1.0.0",
+    "version": "14.0.1.0.0",
     "category": "Localization",
     "website": "https://github.com/OCA/l10n-estonia",
     "author": "CorporateHub, Odoo Community Association (OCA)",
@@ -18,7 +18,7 @@
         "data/kmd_2017.xml",
         "data/account_chart_template.xml",
         "data/account.account.template.csv",
-        "data/account_group.xml",
+        "data/account_group_template.xml",
         "data/account_tax_group.xml",
         "data/account_tax_template.xml",
         "data/account_fiscal_position_template.xml",

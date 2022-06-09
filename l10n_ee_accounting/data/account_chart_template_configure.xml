@@ -28,8 +28,9 @@
         />
         <field name="default_pos_receivable_account_id" ref="trade_receivable_pos" />
         <field name="property_advance_tax_payment_account_id" ref="mta_prepayment" />
+        <field name="account_journal_suspense_account_id" ref="bank_suspense" />
     </record>
-    <function model="account.chart.template" name="try_loading_for_current_company">
+    <function model="account.chart.template" name="try_loading">
         <value eval="[ref('l10n_ee_accounting.chart_template')]" />
     </function>
 </odoo>

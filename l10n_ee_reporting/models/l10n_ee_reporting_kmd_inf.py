@@ -97,10 +97,10 @@ class L10nEeReportingKmdInf(models.Model):
                     move_line.company_id AS company_id,
                     (
                         CASE
-                            WHEN move.type = 'out_invoice' THEN 'A'
-                            WHEN move.type = 'out_refund' THEN 'A'
-                            WHEN move.type = 'in_invoice' THEN 'B'
-                            WHEN move.type = 'in_refund' THEN 'B'
+                            WHEN move.move_type = 'out_invoice' THEN 'A'
+                            WHEN move.move_type = 'out_refund' THEN 'A'
+                            WHEN move.move_type = 'in_invoice' THEN 'B'
+                            WHEN move.move_type = 'in_refund' THEN 'B'
                         END
                     ) AS part,
                     move_line.company_currency_id AS currency_id,
@@ -132,7 +132,7 @@ class L10nEeReportingKmdInf(models.Model):
                 WHERE
                         move.state = 'posted'
                     AND
-                        move.type IN (
+                        move.move_type IN (
                             'out_invoice',
                             'out_refund',
                             'in_invoice',

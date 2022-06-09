@@ -19,7 +19,8 @@ class L10nEeReportingViesDeclaration(models.Model):
     currency_id = fields.Many2one("res.currency", readonly=True)
     product_id = fields.Many2one("product.product", readonly=True)
     product_type = fields.Selection(
-        [("goods", "Goods"), ("services", "Services")], readonly=True,
+        [("goods", "Goods"), ("services", "Services")],
+        readonly=True,
     )
     partner_id = fields.Many2one("res.partner", readonly=True)
     partner_vat = fields.Char(string="Tax ID", readonly=True)
@@ -28,7 +29,8 @@ class L10nEeReportingViesDeclaration(models.Model):
     def init(self):
         tools.drop_view_if_exists(self.env.cr, self._table)
         l10n_ee_accounting_kmd2017_3_1 = self.env.ref(
-            "l10n_ee_accounting.kmd2017_3_1", raise_if_not_found=False,
+            "l10n_ee_accounting.kmd2017_3_1",
+            raise_if_not_found=False,
         )
         if not l10n_ee_accounting_kmd2017_3_1:
             self.env.cr.execute(

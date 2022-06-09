@@ -32,10 +32,12 @@ class L10nEeReportingKmdInf(models.Model):
     def init(self):
         tools.drop_view_if_exists(self.env.cr, self._table)
         l10n_ee_accounting_vat_20 = self.env.ref(
-            "l10n_ee_accounting.vat_20", raise_if_not_found=False,
+            "l10n_ee_accounting.vat_20",
+            raise_if_not_found=False,
         )
         l10n_ee_accounting_vat_9 = self.env.ref(
-            "l10n_ee_accounting.vat_9", raise_if_not_found=False,
+            "l10n_ee_accounting.vat_9",
+            raise_if_not_found=False,
         )
         base_ee = self.env.ref("base.ee")
         if not l10n_ee_accounting_vat_20 or not l10n_ee_accounting_vat_9:

@@ -263,7 +263,7 @@
     <record id="bs_fa_tangible_field" model="mis.report.kpi">
         <field name="report_id" ref="bs" />
         <field name="sequence">1250</field>
-        <field name="name">fa_intangible</field>
+        <field name="name">fa_tangible</field>
         <field name="description">Tangible assets</field>
         <field name="style_id" ref="bs_fa_tangible_style" />
         <field name="type">num</field>

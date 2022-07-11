@@ -5,7 +5,7 @@
 -->
 <odoo noupdate="1">
     <record id="l10n_ee_reporting_vies_declaration_company_rule" model="ir.rule">
-        <field name="name">l10n EE Accounting VIES declaration</field>
+        <field name="name">l10n EE Reporting VIES declaration</field>
         <field name="model_id" ref="model_l10n_ee_reporting_vies_declaration" />
         <field name="global" eval="True" />
         <field name="domain_force">
@@ -13,7 +13,7 @@
         </field>
     </record>
     <record id="l10n_ee_reporting_kmd_inf_company_rule" model="ir.rule">
-        <field name="name">l10n EE Accounting VIES declaration</field>
+        <field name="name">l10n EE Reporting VIES declaration</field>
         <field name="model_id" ref="model_l10n_ee_reporting_kmd_inf" />
         <field name="global" eval="True" />
         <field name="domain_force">

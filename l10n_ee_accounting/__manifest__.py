@@ -3,7 +3,7 @@
 {
     "name": "Estonia - Accounting",
     "summary": "Estonian accounting localization",
-    "version": "13.0.1.0.0",
+    "version": "13.0.1.1.0",
     "category": "Localization",
     "website": "https://github.com/OCA/l10n-estonia",
     "author": "CorporateHub, Odoo Community Association (OCA)",

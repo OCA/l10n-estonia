@@ -1,8 +1,8 @@
 # Do NOT update manually; changes here will be overwritten by Copier
-_commit: v1.5.2
-_src_path: gh:oca/oca-addons-repo-template
+_commit: v1.7.0
+_src_path: git+https://github.com/oca/oca-addons-repo-template
 ci: GitHub
-dependency_installation_mode: PIP
+dependency_installation_mode: OCA
 generate_requirements_txt: true
 include_wkhtmltopdf: false
 odoo_version: 15.0
@@ -15,3 +15,4 @@ repo_slug: l10n-estonia
 repo_website: https://github.com/OCA/l10n-estonia
 travis_apt_packages: []
 travis_apt_sources: []
+

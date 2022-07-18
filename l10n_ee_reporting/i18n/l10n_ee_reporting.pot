@@ -154,6 +154,11 @@ msgid "9. Supply of immovables, scrap metal, precious metal and metal products s
 msgstr ""
 
 #. module: l10n_ee_reporting
+#: model:mis.report.kpi,description:l10n_ee_reporting.is_l2_administrative_and_general_expenses_field
+msgid "Administrative and general expenses"
+msgstr ""
+
+#. module: l10n_ee_reporting
 #: model:ir.model.fields,field_description:l10n_ee_reporting.field_l10n_ee_reporting_vies_declaration__amount
 msgid "Amount"
 msgstr ""
@@ -221,6 +226,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_ee_reporting.field_l10n_ee_reporting_vies_declaration__date
 #: model_terms:ir.ui.view,arch_db:l10n_ee_reporting.l10n_ee_reporting_vies_declaration_view_search
 msgid "Date"
+msgstr ""
+
+#. module: l10n_ee_reporting
+#: model:mis.report.kpi,description:l10n_ee_reporting.is_l1_depreciation_and_impairment_field
+msgid "Depreciation and impairment of fixed assets"
 msgstr ""
 
 #. module: l10n_ee_reporting
@@ -366,6 +376,11 @@ msgstr ""
 #: model:mis.report.kpi,description:l10n_ee_reporting.bs_cl_loan_liabilities_field
 #: model:mis.report.kpi,description:l10n_ee_reporting.bs_ncl_loan_liabilities_field
 msgid "Loan liabilities"
+msgstr ""
+
+#. module: l10n_ee_reporting
+#: model:mis.report.kpi,description:l10n_ee_reporting.is_l2_marketing_expenses_field
+msgid "Marketing expenses"
 msgstr ""
 
 #. module: l10n_ee_reporting

@@ -31,10 +31,13 @@
               - 203xxx Receivables and Prepayments
               - 204xxx Investment Properties
                 - 204000 Investment Properties
+                - 204001 Depreciation of Investment Properties
               - 205xxx Tangible Assets
                 - 205000 Tangible Assets
+                - 205001 Depreciation of Tangible Assets
               - 206xxx Intangible Fixed Assets
                 - 206000 Intangible Fixed Assets
+                - 206001 Depreciation of Intangible Fixed Assets
           - 3xxxxx Current Liabilities
               - 301xxx Payables and Prepayments
                   - 3011xx Trade Payables
@@ -86,6 +89,7 @@
                     - 703300 Employee Tax Expenses
               - 704xxx Expenses
                 - 704000 Expenses
+                - 704010 Depreciation expenses
               - 705xxx Financial Expenses
                 - 7050xx Foreign Exchange Losses
                   - 705010 Foreign Exchange Loss (bills & invoices)

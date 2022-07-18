@@ -132,8 +132,28 @@
         <field name="auto_expand_accounts_style_id" ref="is_l1_account_style"/>
     </record>
 
+    <record id="is_l1_depreciation_and_impairment_style" model="mis.report.style">
+        <field
+            name="name"
+        >(EE) Income Statement (P&amp;L) Layout 1: Depreciation and impairment of fixed assets</field>
+    </record>
+
+    <record id="is_l1_depreciation_and_impairment_field" model="mis.report.kpi">
+        <field name="report_id" ref="is_l1" />
+        <field name="sequence">100</field>
+        <field name="name">depreciation_and_impairment</field>
+        <field name="description">Depreciation and impairment of fixed assets</field>
+        <field name="style_id" ref="is_l1_depreciation_and_impairment_style" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field
+            name="expression"
+        >-balp['|', ('user_type_id', '=', ref('account.data_account_type_depreciation').id), ('tag_ids.id', '=', ref('l10n_ee_accounting.is_l1_depreciation_and_impairment').id)]</field>
+        <field name="auto_expand_accounts" eval="True" />
+        <field name="auto_expand_accounts_style_id" ref="is_l1_account_style" />
+    </record>
+
     <!--
-    TODO: Depreciation and impairment of fixed assets 100
     TODO: Significant rebates of current assets 110
      -->
 
@@ -168,7 +188,9 @@
         <field name="style_id" ref="is_l1_total_operating_profit_loss_style"/>
         <field name="type">num</field>
         <field name="compare_method">pct</field>
-        <field name="expression">sales_revenue + other_revenue + pl_biological_assets + goods_raw_materials_services + employee_expenses + other_expenses</field>
+        <field
+            name="expression"
+        >sales_revenue + other_revenue + pl_biological_assets + goods_raw_materials_services + employee_expenses + depreciation_and_impairment + other_expenses</field>
     </record>
 
     <record id="is_l1_profit_loss_from_subsidiaries_style" model="mis.report.style">
@@ -415,10 +437,50 @@
         <field name="auto_expand_accounts_style_id" ref="is_l2_account_style"/>
     </record>
 
-    <!--
-    Marketing expenses 50
-    Administrative and general expenses 60
-    -->
+    <record id="is_l2_marketing_expenses_style" model="mis.report.style">
+        <field
+            name="name"
+        >(EE) Income Statement (P&amp;L) Layout 2: Marketing expenses</field>
+    </record>
+
+    <record id="is_l2_marketing_expenses_field" model="mis.report.kpi">
+        <field name="report_id" ref="is_l2" />
+        <field name="sequence">50</field>
+        <field name="name">marketing_expenses</field>
+        <field name="description">Marketing expenses</field>
+        <field name="style_id" ref="is_l2_marketing_expenses_style" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field
+            name="expression"
+        >-balp[('tag_ids.id', '=', ref('l10n_ee_accounting.is_l2_marketing_expenses').id)]</field>
+        <field name="auto_expand_accounts" eval="True" />
+        <field name="auto_expand_accounts_style_id" ref="is_l2_account_style" />
+    </record>
+
+    <record
+        id="is_l2_administrative_and_general_expenses_style"
+        model="mis.report.style"
+    >
+        <field
+            name="name"
+        >(EE) Income Statement (P&amp;L) Layout 2: Administrative and general expenses</field>
+    </record>
+
+    <record id="is_l2_administrative_and_general_expenses_field" model="mis.report.kpi">
+        <field name="report_id" ref="is_l2" />
+        <field name="sequence">60</field>
+        <field name="name">administrative_and_general_expenses</field>
+        <field name="description">Administrative and general expenses</field>
+        <field name="style_id" ref="is_l2_administrative_and_general_expenses_style" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field
+            name="expression"
+        >-balp[('tag_ids.id', '=', ref('l10n_ee_accounting.is_l2_administrative_and_general_expenses').id)]</field>
+        <field name="auto_expand_accounts" eval="True" />
+        <field name="auto_expand_accounts_style_id" ref="is_l2_account_style" />
+    </record>
 
     <record id="is_l2_other_revenue_style" model="mis.report.style">
         <field name="name">(EE) Income Statement (P&amp;L) Layout 2: Other operating revenue</field>
@@ -468,7 +530,9 @@
         <field name="style_id" ref="is_l2_total_operating_profit_loss_style"/>
         <field name="type">num</field>
         <field name="compare_method">pct</field>
-        <field name="expression">pl_gross + pl_biological_assets + other_revenue + other_expenses</field>
+        <field
+            name="expression"
+        >pl_gross + pl_biological_assets + marketing_expenses + administrative_and_general_expenses + other_revenue + other_expenses</field>
     </record>
 
     <record id="is_l2_profit_loss_from_subsidiaries_style" model="mis.report.style">

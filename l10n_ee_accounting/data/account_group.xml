@@ -75,6 +75,8 @@
                 - 6020xx Foreign Exchange Gains
                   - 602010 Foreign Exchange Gain (bills & invoices)
                   - 602020 Foreign Exchange Gain (bank accounts & loans)
+              - 603xxx Capital Expenditure
+                - 603000 Capital Expenditure
           - 7xxxxx Expenses
               - 701xxx Cost of Trade Income
                 - 701000 Cost of Trade Income
@@ -283,6 +285,11 @@
         <field name="parent_id" ref="financial_income_account_group"/>
         <field name="name">Foreign Exchange Gains</field>
         <field name="code_prefix">6020</field>
+    </record>
+    <record id="capital_expenditure_account_group" model="account.group">
+        <field name="parent_id" ref="income_section" />
+        <field name="name">Capital Expenditure</field>
+        <field name="code_prefix">603</field>
     </record>
     <record id="expenses_section" model="account.group">
         <field name="name">Expenses</field>

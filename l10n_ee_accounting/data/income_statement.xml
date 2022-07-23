@@ -85,10 +85,22 @@
         >(EE) Income statement (Layout 2): Administrative and general expenses</field>
         <field name="applicability">accounts</field>
     </record>
-
+    <record id="is_l2_other_revenue" model="account.account.tag">
+        <field
+            name="name"
+        >(EE) Income statement (Layout 2): Other operating revenue</field>
+        <field name="applicability">accounts</field>
+        <field name="country_id" ref="base.ee" />
+    </record>
 <!-- TODO: Layout 1: Change in stocks of agricultural produce -->
 <!-- TODO: Layout 1: Changes in inventories of finished goods and work in progress -->
-<!-- TODO: Layout 1: Capitalised expenditure when manufacturing fixed assets for own purposes -->
+    <record id="is_l1_capital_expenditure" model="account.account.tag">
+        <field
+            name="name"
+        >(EE) Income statement (Layout 1): Capitalised expenditure when manufacturing fixed assets for own purposes</field>
+        <field name="applicability">accounts</field>
+        <field name="country_id" ref="base.ee" />
+    </record>
 <!-- TODO: Layout 1: Miscellaneous operating expenses -->
     <record id="is_l1_depreciation_and_impairment" model="account.account.tag">
         <field

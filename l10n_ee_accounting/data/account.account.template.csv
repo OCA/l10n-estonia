@@ -44,3 +44,4 @@
 "bank_suspense","Bank Suspense","101200","account.data_account_type_current_assets","l10n_ee_accounting.chart_template","l10n_ee_accounting.bs_bank_and_cash","False",""
 "payment_debit","Outstanding Receipts","101201","account.data_account_type_current_assets","l10n_ee_accounting.chart_template","l10n_ee_accounting.bs_bank_and_cash","True",""
 "payment_credit","Outstanding Payments","101202","account.data_account_type_current_assets","l10n_ee_accounting.chart_template","l10n_ee_accounting.bs_bank_and_cash","True",""
+"capital_expenditure","Capital Expenditure","603000","account.data_account_type_revenue","l10n_ee_accounting.chart_template","l10n_ee_accounting.is_l1_capital_expenditure,l10n_ee_accounting.is_l2_other_revenue","False",""

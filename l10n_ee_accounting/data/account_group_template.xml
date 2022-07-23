@@ -81,6 +81,8 @@
                   - 602020 Foreign Exchange Gain (bank accounts & loans)
                 - 6021xx Cash Difference Gain
                   - 602100 Cash Difference Gain
+                - 603xxx Capital Expenditure
+                  - 603000 Capital Expenditure
           - 7xxxxx Expenses
               - 701xxx Cost of Trade Income
                 - 701000 Cost of Trade Income
@@ -355,6 +357,12 @@
         <field name="parent_id" ref="financial_income_account_group" />
         <field name="name">Cash Difference Gain</field>
         <field name="code_prefix_start">6021</field>
+        <field name="chart_template_id" ref="chart_template" />
+    </record>
+    <record id="capital_expenditure_account_group" model="account.group.template">
+        <field name="parent_id" ref="income_section" />
+        <field name="name">Capital Expenditure</field>
+        <field name="code_prefix_start">603</field>
         <field name="chart_template_id" ref="chart_template" />
     </record>
     <record id="expenses_section" model="account.group.template">

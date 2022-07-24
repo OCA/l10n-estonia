@@ -43,3 +43,4 @@
 "trade_receivable_pos","Trade Receivable (PoS)","102110","account.data_account_type_receivable","l10n_ee_accounting.chart_template","l10n_ee_accounting.bs_receivables_and_prepayments","True",""
 "bank_suspense","Bank Suspense","101200","account.data_account_type_current_assets","l10n_ee_accounting.chart_template","l10n_ee_accounting.bs_bank_and_cash","False",""
 "capital_expenditure","Capital Expenditure","603000","account.data_account_type_revenue","l10n_ee_accounting.chart_template","l10n_ee_accounting.is_l1_capital_expenditure,l10n_ee_accounting.is_l2_other_revenue","False",""
+"changes_in_inventories","Changes in Inventories","604000","account.data_account_type_revenue","l10n_ee_accounting.chart_template","l10n_ee_accounting.is_l1_changes_in_inventories,l10n_ee_accounting.is_l2_other_revenue","False",""

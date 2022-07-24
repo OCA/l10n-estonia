@@ -80,6 +80,8 @@
                   - 602100 Cash Difference Gain
                 - 603xxx Capital Expenditure
                   - 603000 Capital Expenditure
+                - 604xxx Changes in Inventories
+                  - 604000 Changes in Inventories
           - 7xxxxx Expenses
               - 701xxx Cost of Trade Income
                 - 701000 Cost of Trade Income
@@ -302,6 +304,11 @@
         <field name="parent_id" ref="income_section" />
         <field name="name">Capital Expenditure</field>
         <field name="code_prefix">603</field>
+    </record>
+    <record id="changes_in_inventories_account_group" model="account.group">
+        <field name="parent_id" ref="income_section" />
+        <field name="name">Changes in Inventories</field>
+        <field name="code_prefix">604</field>
     </record>
     <record id="expenses_section" model="account.group">
         <field name="name">Expenses</field>

@@ -169,7 +169,7 @@
         <field name="compare_method">pct</field>
         <field
             name="expression"
-        >-balp[('tag_ids.id', '=', ref('l10n_ee_accounting.is_employee_expenses').id)]</field>
+        >-balp[('tag_ids.id', '=', ref('l10n_ee_accounting.is_l1_employee_expenses').id)]</field>
         <field name="auto_expand_accounts" eval="True" />
         <field name="auto_expand_accounts_style_id" ref="is_l1_account_style" />
     </record>
@@ -636,7 +636,7 @@
         <field name="compare_method">pct</field>
         <field
             name="expression"
-        >-balp[('tag_ids.id', '=', ref('l10n_ee_accounting.is_other_expenses').id)]</field>
+        >-balp['|', ('tag_ids.id', '=', ref('l10n_ee_accounting.is_other_expenses').id), ('tag_ids.id', '=', ref('l10n_ee_accounting.is_l2_other_expenses').id)]</field>
         <field name="auto_expand_accounts" eval="True" />
         <field name="auto_expand_accounts_style_id" ref="is_l2_account_style" />
     </record>

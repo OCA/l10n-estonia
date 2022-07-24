@@ -39,3 +39,4 @@
 "bank_accounts_and_loans_exchange_loss","Foreign Exchange Loss (bank accounts & loans)","705020","account.data_account_type_expenses","l10n_ee_accounting.chart_template","l10n_ee_accounting.is_other_financial_expenses","False","Net loss arising on currency rate difference of the loans, bank accounts"
 "undistributed_profit_loss","Undistributed Profit/Loss","599900","account.data_unaffected_earnings","l10n_ee_accounting.chart_template","","False",""
 "capital_expenditure","Capital Expenditure","603000","account.data_account_type_revenue","l10n_ee_accounting.chart_template","l10n_ee_accounting.is_l1_capital_expenditure,l10n_ee_accounting.is_l2_other_revenue","False",""
+"changes_in_inventories","Changes in Inventories","604000","account.data_account_type_revenue","l10n_ee_accounting.chart_template","l10n_ee_accounting.is_l1_changes_in_inventories,l10n_ee_accounting.is_l2_other_revenue","False",""

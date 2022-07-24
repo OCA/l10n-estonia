@@ -100,7 +100,13 @@
         <field name="country_id" ref="base.ee" />
     </record>
 <!-- TODO: Layout 1: Change in stocks of agricultural produce -->
-<!-- TODO: Layout 1: Changes in inventories of finished goods and work in progress -->
+    <record id="is_l1_changes_in_inventories" model="account.account.tag">
+        <field
+            name="name"
+        >(EE) Income statement (Layout 1): Changes in inventories of finished goods and work in progress</field>
+        <field name="applicability">accounts</field>
+        <field name="country_id" ref="base.ee" />
+    </record>
     <record id="is_l1_capital_expenditure" model="account.account.tag">
         <field
             name="name"

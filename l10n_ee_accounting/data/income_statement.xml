@@ -123,7 +123,13 @@
         <field name="applicability">accounts</field>
         <field name="country_id" ref="base.ee" />
     </record>
-<!-- TODO: Layout 1: Miscellaneous operating expenses -->
+    <record id="is_l1_misc_expenses" model="account.account.tag">
+        <field
+            name="name"
+        >(EE) Income statement (Layout 1): Miscellaneous operating expenses</field>
+        <field name="applicability">accounts</field>
+        <field name="country_id" ref="base.ee" />
+    </record>
     <record id="is_l1_depreciation_and_impairment" model="account.account.tag">
         <field
             name="name"

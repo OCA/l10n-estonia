@@ -210,6 +210,17 @@ msgid "Biological assets"
 msgstr ""
 
 #. module: l10n_ee_reporting
+#: model:mis.report.kpi,description:l10n_ee_reporting.is_l1_capital_expenditure_field
+msgid ""
+"Capitalised expenditure when manufacturing fixed assets for own purposes"
+msgstr ""
+
+#. module: l10n_ee_reporting
+#: model:mis.report.kpi,description:l10n_ee_reporting.is_l1_changes_in_inventories_field
+msgid "Changes in inventories of finished goods and work in progress"
+msgstr ""
+
+#. module: l10n_ee_reporting
 #: model:ir.model.fields,field_description:l10n_ee_reporting.field_l10n_ee_reporting_kmd_inf__company_id
 #: model:ir.model.fields,field_description:l10n_ee_reporting.field_l10n_ee_reporting_vies_declaration__company_id
 msgid "Company"
@@ -395,6 +406,11 @@ msgstr ""
 #. module: l10n_ee_reporting
 #: model:mis.report.kpi,description:l10n_ee_reporting.is_l2_marketing_expenses_field
 msgid "Marketing expenses"
+msgstr ""
+
+#. module: l10n_ee_reporting
+#: model:mis.report.kpi,description:l10n_ee_reporting.is_l1_misc_expenses_field
+msgid "Miscellaneous operating expenses"
 msgstr ""
 
 #. module: l10n_ee_reporting

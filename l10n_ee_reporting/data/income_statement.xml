@@ -168,9 +168,26 @@
         <field name="auto_expand_accounts_style_id" ref="is_l1_account_style" />
     </record>
 
-    <!--
-    TODO: Miscellaneous operating expenses 80
-    -->
+    <record id="is_l1_misc_expenses_style" model="mis.report.style">
+        <field
+            name="name"
+        >(EE) Income Statement (P&amp;L) Layout 1: Miscellaneous operating expenses</field>
+    </record>
+
+    <record id="is_l1_misc_expenses_field" model="mis.report.kpi">
+        <field name="report_id" ref="is_l1" />
+        <field name="sequence">80</field>
+        <field name="name">misc_expenses</field>
+        <field name="description">Miscellaneous operating expenses</field>
+        <field name="style_id" ref="is_l1_misc_expenses_style" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field
+            name="expression"
+        >-balp[('tag_ids.id', '=', ref('l10n_ee_accounting.is_l1_misc_expenses').id)]</field>
+        <field name="auto_expand_accounts" eval="True" />
+        <field name="auto_expand_accounts_style_id" ref="is_l1_account_style" />
+    </record>
 
     <record id="is_l1_employee_expenses_style" model="mis.report.style">
         <field
@@ -257,7 +274,7 @@
         <field name="compare_method">pct</field>
         <field
             name="expression"
-        >sales_revenue + other_revenue + pl_biological_assets + changes_in_inventories + capital_expenditure + goods_raw_materials_services + employee_expenses + depreciation_and_impairment + other_expenses</field>
+        >sales_revenue + other_revenue + pl_biological_assets + changes_in_inventories + capital_expenditure + goods_raw_materials_services + misc_expenses + employee_expenses + depreciation_and_impairment + other_expenses</field>
     </record>
 
     <record id="is_l1_profit_loss_from_subsidiaries_style" model="mis.report.style">

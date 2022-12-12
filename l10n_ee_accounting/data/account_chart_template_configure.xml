@@ -27,6 +27,8 @@
             ref="cash_differrence_loss"
         />
         <field name="default_pos_receivable_account_id" ref="trade_receivable_pos" />
+        <field name="property_tax_payable_account_id" ref="vat_payable" />
+        <field name="property_tax_receivable_account_id" ref="vat_receivable" />
         <field name="property_advance_tax_payment_account_id" ref="mta_prepayment" />
     </record>
     <function model="account.chart.template" name="try_loading_for_current_company">

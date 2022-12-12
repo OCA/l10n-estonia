@@ -21,7 +21,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[l10n_ee_accounting](l10n_ee_accounting/) | 13.0.1.2.0 | [![alexey-pelykh](https://github.com/alexey-pelykh.png?size=30px)](https://github.com/alexey-pelykh) | Estonian accounting localization
+[l10n_ee_accounting](l10n_ee_accounting/) | 13.0.1.2.1 | [![alexey-pelykh](https://github.com/alexey-pelykh.png?size=30px)](https://github.com/alexey-pelykh) | Estonian accounting localization
 [l10n_ee_reporting](l10n_ee_reporting/) | 13.0.1.2.1 | [![alexey-pelykh](https://github.com/alexey-pelykh.png?size=30px)](https://github.com/alexey-pelykh) | Estonian reporting localization
 
 [//]: # (end addons)

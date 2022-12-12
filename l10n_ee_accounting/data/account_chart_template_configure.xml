@@ -27,6 +27,8 @@
             ref="cash_differrence_loss"
         />
         <field name="default_pos_receivable_account_id" ref="trade_receivable_pos" />
+        <field name="property_tax_payable_account_id" ref="vat_payable" />
+        <field name="property_tax_receivable_account_id" ref="vat_receivable" />
         <field name="property_advance_tax_payment_account_id" ref="mta_prepayment" />
         <field name="account_journal_suspense_account_id" ref="bank_suspense" />
         <field name="account_journal_payment_debit_account_id" ref="payment_debit" />
